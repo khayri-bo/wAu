@@ -3,19 +3,19 @@
 #include "background.h"
 void initBckg (background * b, char url[]){
 b->img = IMG_Load (url);
-b->bckg.x = 0;
-b->bckg.y = 0;
-b->bckg.w = b->img->w;
-b->bckg.h = b->img->h;
+b->bck.x = 0;
+b->bck.y = 0;
+b->bck.w = b->img->w;
+b->bck.h = b->img->h;
 }
 void showBckg (SDL_Surface * screen, background b){
-SDL_BlitSurface (b.img, &(b.bckg), screen, NULL);
+SDL_BlitSurface (b.img, &(b.bck), screen, NULL);
 }
 void scrollToLeft (background * b){
-if (b->bckg.x != 0)
-b->bckg.x--;
+if (b->bck.x != 0)
+b->bck.x--;
 }
 void scrollToRight (background * b){
-if (b->bckg.w - b->bckg.x != CAMERA_W)
-b->bckg.x++;
+if (b->bck.w - b->bck.x != CAMERA_W)
+b->bck.x++;
 }
