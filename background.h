@@ -1,26 +1,16 @@
-#ifndef STRUCT_H_INCLUDED
-#define STRUCT_H_INCLUDED
-#include <stdio.h>
-#include <stdlib.h>
 #include <SDL/SDL.h>
-#include <SDL/SDL_image.h>
-#include <SDL/SDL_mixer.h>
-#include <SDL/SDL_ttf.h>
-#include <time.h>
-#include <unistd.h>
-
-typedef struct background
-   {
-	SDL_Surface *afficher_background;
-	SDL_Rect pos_background;
-	SDL_Rect pos_background2;
-	SDL_Surface *calque_background;
-        SDL_Rect position;
-   }background;
-
-void initialiser_background(background *b);
-void afficher_background(background b,SDL_Surface *screen);
-void scrolling(background *b,int direction);
+#define CAMERA_W 100
+#define CAMERA_H 200
+struct background
+{
+SDL_Rect bckg;
+SDL_Surface *img;
+};
+typedef struct background background;
+void initBckg (background * b, char url[]);
+void showBckg (SDL_Surface * screen, background b);
+void scrollToLeft (background * b);
+void scrollToRight (background * b);
 
 
 #endif
