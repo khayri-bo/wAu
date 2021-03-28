@@ -3,12 +3,12 @@
 #define CAMERA_H 200
 struct background
 {
-SDL_Rect bckg;
+SDL_Rect bck;
 SDL_Surface *img;
 };
 typedef struct background background;
-void initBckg (background * b, char url[]);
-void showBckg (SDL_Surface * screen, background b);
+void initBackground (background * b, char url[]);
+void showBacckground (SDL_Surface * screen, background b);
 void scrollToLeft (background * b);
 void scrollToRight (background * b);
 
