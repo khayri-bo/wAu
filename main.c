@@ -13,8 +13,8 @@ return EXIT_FAILURE;
 }
 screen = SDL_SetVideoMode (CAMERA_W, CAMERA_H, 32,
 SDL_HWSURFACE | SDL_DOUBLEBUF);
-initBckg (&b, "background.png");
-showBckg (screen, b);
+initBackground (&b, "background.png");
+showBackground (screen, b);
 SDL_Flip (screen);
 int continuer = 0;
 SDL_EnableKeyRepeat (SDL_DEFAULT_REPEAT_DELAY,
@@ -38,7 +38,7 @@ break;
 break;
 }
 }
-showBckg (screen, b);
+showBackground (screen, b);
 SDL_Flip (screen);
 }
 SDL_FreeSurface(screen);
