@@ -2,11 +2,12 @@
 #include <SDL/SDL_image.h>
 #include "background.h"
 void initBackground (background * b){
-b->img = IMG_Load ("backgroundd.png");
 b->bck.x = 0;
 b->bck.y = 0;
 b->bck.w = b->img->w;
 b->bck.h = b->img->h;
+b->img = IMG_Load ("backgroundd.png");
+
 }
 void showBackground (SDL_Surface * screen, background b){
   SDL_BlitSurface(b->img,&b->camera,screen,NULL);
