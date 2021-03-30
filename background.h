@@ -7,7 +7,7 @@ SDL_Rect bck;
 SDL_Surface *img;
 };
 typedef struct background background;
-void initBackground (background * b, char url[]);
+void initBackground (background * b);
 void showBackground (SDL_Surface * screen, background b);
 void scrollToLeft (background * b);
 void scrollToRight (background * b);
