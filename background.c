@@ -8,7 +8,7 @@ b->bck.y = 0;
 b->bck.w = b->img->w;
 b->bck.h = b->img->h;
 }
-void showBacckground (SDL_Surface * screen, background b){
+void showBackground (SDL_Surface * screen, background b){
 SDL_BlitSurface (b.img, &(b.bck), screen, NULL);
 }
 void scrollToLeft (background * b){
